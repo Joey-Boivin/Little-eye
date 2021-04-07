@@ -21,7 +21,7 @@ def add_a_new_item(tag:str):
     #Although the tags won't dupplicate in the file
     #I don't want an unecessary operation to occur.
     if tag in current_data["items"].keys():
-        print(f"{tag} is aleredy tracked.")
+        print(f"{tag} is alredy tracked.")
         return
     new_item_data = fetch_html(tag)
     new_item = {"history": {str(dt.now().date()) : new_item_data[tag]["price"]},
