@@ -26,4 +26,4 @@ To open the help menu:
 
 ## License
 
-This software is licensed under the [MIT Liscence](LICENSE.md)
+This software is licensed under the [MIT Liscence](https://github.com/Joey-Boivin/newegg-tracker/blob/main/LICENSE)
