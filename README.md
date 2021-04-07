@@ -26,4 +26,4 @@ To open the help menu:
 
 ## License
 
-This software is licensed under the MIT Liscence.
+This software is licensed under the [MIT Liscence](LICENSE.md)
