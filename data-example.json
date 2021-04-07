@@ -1,0 +1,96 @@
+{
+    "last-updated": "2021-04-07 8:46:04.782163",
+    "number-of-items": 7,
+    "items": {
+        "msi-geforce-rtx-3090-rtx-3090-gaming-x-trio-24g/p/N82E16814137595?Description=rtx%203090&cm_re=rtx_3090-_-14-137-595-_-Product": {
+            "history": {
+                "2021-04-05": "$2,799.99",
+                "2021-04-06": "$2,799.99",
+                "2021-04-07": "$2,799.99"
+            },
+            "shipping": "$7.99 ",
+            "metadata": {
+                "OOS": true
+            },
+            "product-name": "MSI GeForce RTX3090"
+        },
+        "huawei-55024688-smart-watch-watch-gt-2-sport-edition/p/N82E16886611051?Item=N82E16886611051&cm_sp=Homepage_dailydeals-_-P2_86-611-051-_-04052021": {
+            "history": {
+                "2021-04-05": "$198.99",
+                "2021-04-06": "$198.99",
+                "2021-04-07": "$198.99"
+            },
+            "shipping": "$0.02 ",
+            "metadata": {
+                "price-was": "$299.99",
+                "time-left": "Sale Ends in 5 Days (Sun) - ",
+                "price-save": "$101.00 ",
+                "percent-save": "(34%)"
+            },
+            "product-name": "HUAWEI Watch GT2"
+        },
+        "asus-vivobook-flip-tp412fa-ds51t-ca-star-grey-metal/p/N82E16834235326?Item=N82E16834235326": {
+            "history": {
+                "2021-04-06": "$835.99",
+                "2021-04-07": "$835.99"
+            },
+            "shipping": "",
+            "metadata": {
+                "OOS": true,
+                "price-was": "$849.00"
+            },
+            "product-name": "ASUS Vivobook FlipIntel"
+        },
+        "asus-rt-ac68u-ieee-802-11a-ieee-802-11b-ieee-802-11g-ieee-802-11n-ieee-802-11ac-ipv4-ipv6/p/N82E16833320174": {
+            "history": {
+                "2021-04-06": "$179.99",
+                "2021-04-07": "$179.99"
+            },
+            "shipping": "",
+            "metadata": {},
+            "product-name": "ASUS AC1900 Wi-FiDual-band"
+        },
+        "netgear-archer-ax50-ieee-802-11ax-ac-n-a-5-ghz-ieee-802-11ax-n-b-g-2-4-ghz/p/N82E16833704495?Item=N82E16833704495": {
+            "history": {
+                "2021-04-06": "$149.99",
+                "2021-04-07": "$149.99"
+            },
+            "shipping": "",
+            "metadata": {
+                "price-was": "$179.99",
+                "time-left": "Sale Ends in 2 Days (Thu) - ",
+                "price-save": "$30.00 ",
+                "percent-save": "(17%)"
+            },
+            "product-name": "TP-Link Archer AX50AX3000"
+        },
+        "tp-link-archer-c5400x/p/N82E16833704423": {
+            "history": {
+                "2021-04-06": "$279.99",
+                "2021-04-07": "$279.99"
+            },
+            "shipping": "",
+            "metadata": {
+                "price-was": "$449.99",
+                "time-left": "Sale Ends in 6 Days (Mon) - ",
+                "price-save": "$170.00 ",
+                "percent-save": "(38%)"
+            },
+            "product-name": "TP-LINK AC5400 MU-MIMOTri-Band"
+        },
+        "seagate-ironwolf-st6000vn0033-6tb/p/N82E16822172057?Item=N82E16822172057&cm_sp=Homepage_dailydeals-_-P0_22-172-057-_-04062021": {
+            "history": {
+                "2021-04-06": "$177.99",
+                "2021-04-07": "$177.99"
+            },
+            "shipping": "$7.99 ",
+            "metadata": {
+                "price-was": "$239.99",
+                "time-left": "Sale Ends in 2 Days (Thu) - ",
+                "price-save": "$62.00 ",
+                "percent-save": "(26%)"
+            },
+            "product-name": "Seagate IronWolf 6TBNAS"
+        }
+    }
+}
