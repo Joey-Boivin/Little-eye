@@ -24,11 +24,13 @@ def main():
     args = parser.parse_args()
     gui = args.Gui
 
+    #Cannot update the data before I check if it's the first use
+    #TODO: Maybe modify the update_data method so I can update ASAP and get_data after that stored into a variable (cleaner code)
     if not Tracker.get_data()['items']:
         if not args.add:
             print("You have no items tracked yet. Would you like to track one? Execute python main.py -h for help")
             return
-
+    
     Tracker.update_data()
     if gui == "Y":
         print('Gui support is not here yet.')

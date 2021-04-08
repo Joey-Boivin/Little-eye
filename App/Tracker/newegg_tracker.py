@@ -2,9 +2,11 @@
 This module contains all the functions necessary to manage the data in data.json
 """
 import json
-from datetime import datetime as dt
 import traceback
 import requests
+import os
+import uuid
+from datetime import datetime as dt
 from bs4 import BeautifulSoup
 
 
@@ -23,10 +25,11 @@ def add_a_new_item(tag:str):
     if tag in current_data["items"].keys():
         print(f"{tag} is alredy tracked.")
         return
-    new_item_data = fetch_html(tag)
+    new_item_data = fetch_html(tag, True)
     new_item = {"history": {str(dt.now().date()) : new_item_data[tag]["price"]},
                 "shipping": new_item_data[tag]["shipping"],
-                "metadata": new_item_data[tag]["metadata"]}
+                "metadata": new_item_data[tag]["metadata"],
+                "img-token": new_item_data[tag]["img-token"]}
     current_data["items"][tag] = new_item
     with open("./Tracker/data.json", "w") as file:
         json.dump(current_data, file, indent=4)
@@ -39,11 +42,11 @@ def remove_an_existing_item(tag:str):
         del current_data["items"][tag]
         with open("./Tracker/data.json", "w") as file:
             json.dump(current_data, file, indent=4)
+        #os.remove(f"../Graphic/Images/{tag}.png")
     except:
         traceback.print_exc()
         print(f"Something went wrong while trying to delete {tag}.\
         Maybe the item is no longer being tracked or was never tracked.")
-
 
 def update_data():
     """Updates the information about the items that are tracked in data.json"""
@@ -63,7 +66,7 @@ def update_data():
 
 
 #TODO: This function is too long and needs to be split into different parts
-def fetch_html(tag: str) -> dict:
+def fetch_html(tag: str, is_new:bool = False) -> dict:
     """
     Gets all the information necessary from Newegg.ca for a specific item and generates
     a dictionary in which everything about the product is contained.
@@ -110,5 +113,24 @@ def fetch_html(tag: str) -> dict:
         traceback.print_exc()
         print(f"Something went wrong while trying to structure the data for {tag}")
         return {}
+    
+    if is_new:
+        #Download image from Newegg
+        #I cannot save the image as tag.png because the tag often contains /
+        #To resolve this issue, I will use the uuid library
+        #Because of the smaller scale of the project, 
+        #I believe generating a random uuid should be good enough
+        src = str(uuid.uuid4())
+        try:
+            img_tag = soup.find("img", {"class": "product-view-img-original"})
+            url = img_tag['src']
+            img_data = requests.get(url).content
+            with open(f'./Graphic/Images/{src}.png', "wb") as file:
+                file.write(img_data)
+        except:
+            traceback.print_exc()
+            print(f"Could not get or save the image for {tag}")
+            src = ""
+        res["img-token"] = str(src)
 
     return {tag: res}
