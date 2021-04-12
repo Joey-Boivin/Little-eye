@@ -6,8 +6,8 @@ class Application:
 
     def __init__(self, data):
         self.data = data
-        icons, priceWidgets = self.create_widgets()
-        self.show_widgets(icons, priceWidgets)
+        icons, priceWidgets, nameWidgets = self.create_widgets()
+        self.show_widgets(icons, priceWidgets, nameWidgets)
 
     def create_widgets(self):
         icons = []
@@ -22,18 +22,26 @@ class Application:
             priceWidget = Label(root, text=price)
             priceWidgets.append(priceWidget)
 
-        return icons, priceWidgets
+            name = _data['product-name']
+            nameWidget = Label(root, text=name)
+            nameWidgets.append(nameWidget)
+        return icons, priceWidgets, nameWidgets
 
-    def show_widgets(self, icons, priceWidgets):
+    def show_widgets(self, icons, priceWidgets, nameWidgets):
 
         count = 0
         for icon in icons:
             panel = Label(root, image=icon)
-            panel.grid(row=count, column=0)
+            panel.grid(row=count, column=0, padx = '50')
+            count+=1
+        count = 0
+        for name in nameWidgets:
+            name.grid(row=count, column=1, padx = '50')
             count+=1
         count = 0
         for price in priceWidgets:
-            price.grid(row=count,column=1)
+            price.grid(row=count,column=2, padx = '50')
             count +=1
+        
         root.mainloop()
 
