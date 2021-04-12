@@ -2,6 +2,7 @@ from tkinter import *
 from PIL import ImageTk, Image #Tkinter's image management is outdated
 
 root = Tk()
+root.config(bg='#2D2D2D')
 class Application:
 
     def __init__(self, data):
@@ -20,7 +21,7 @@ class Application:
             icons.append(img)
 
             price = list(_data['history'].values())[-1] #last value
-            priceWidget = Label(root, text=price)
+            priceWidget = Label(root, text=price, bg='#2D2D2D', fg='white')
             priceWidgets.append(priceWidget)
 
             metadata = _data['metadata']
@@ -29,11 +30,11 @@ class Application:
                 for key, value in metadata.items():
                     display +=  str(key) + ': ' + str(value) + ' \n'
 
-            display = Label(root, text=display)
+            display = Label(root, text=display, bg='#2D2D2D', fg='white')
             metaWidget.append(display)
 
             name = _data['product-name']
-            nameWidget = Label(root, text=name)
+            nameWidget = Label(root, text=name, bg='#2D2D2D', fg='white')
             nameWidgets.append(nameWidget)
 
 
