@@ -3,6 +3,7 @@ import argparse
 import json
 import os
 import Tracker
+import Graphic
 
 if not os.path.exists('./Tracker/data.json'):
     with open("./Tracker/data.json", "w") as file:
@@ -30,11 +31,12 @@ def main():
         if not args.add:
             print("You have no items tracked yet. Would you like to track one? Execute python main.py -h for help")
             return
-    
+
     Tracker.update_data()
+    data = Tracker.get_data()
+
     if gui == "Y":
-        print('Gui support is not here yet.')
-        return
+        app = Graphic.Application(data)
     elif gui == 'N':
         if args.add:
             Tracker.add_a_new_item(args.add)

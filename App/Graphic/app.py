@@ -1,9 +1,7 @@
 from tkinter import *
 from PIL import ImageTk, Image #Tkinter's image management is outdated
-import webbrowser
 
 root = Tk()
-
 class Application:
 
     def __init__(self, data):
@@ -16,7 +14,7 @@ class Application:
         priceWidgets = []
         nameWidgets = []
         for tag, _data in self.data['items'].items():
-            path = f'./Images/{_data["img-token"]}.png'
+            path = f'./Graphic/Images/{_data["img-token"]}.png'
             img = ImageTk.PhotoImage(Image.open(path).resize((100,100)))
             icons.append(img)
 
@@ -38,5 +36,4 @@ class Application:
             price.grid(row=count,column=1)
             count +=1
         root.mainloop()
-
 
