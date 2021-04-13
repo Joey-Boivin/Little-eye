@@ -38,11 +38,13 @@ def add_a_new_item(tag:str):
 def remove_an_existing_item(tag:str):
     """Removes an item from the data.json file"""
     current_data = get_data()
+    
     try:
+        image_token = current_data["items"][tag]["img-token"]
+        os.remove(f"./Graphic/Images/{image_token}.png")
         del current_data["items"][tag]
         with open("./Tracker/data.json", "w") as file:
             json.dump(current_data, file, indent=4)
-        #os.remove(f"../Graphic/Images/{tag}.png")
     except:
         traceback.print_exc()
         print(f"Something went wrong while trying to delete {tag}.\
@@ -131,6 +133,6 @@ def fetch_html(tag: str, is_new:bool = False) -> dict:
             traceback.print_exc()
             print(f"Could not get or save the image for {tag}")
             src = ""
-        res["img-token"] = str(src)
+        res["img-token"] = src
 
     return {tag: res}
