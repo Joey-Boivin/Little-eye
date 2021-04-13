@@ -3,6 +3,7 @@ from PIL import ImageTk, Image #Tkinter's image management is outdated
 
 root = Tk()
 root.config(bg='#2D2D2D')
+root.title("Newegg tracker by Joey-Boivin on GitHub")
 class Application:
 
     def __init__(self, data):
@@ -15,7 +16,7 @@ class Application:
         priceWidgets = []
         nameWidgets = []
         metaWidget = []
-        for tag, _data in self.data['items'].items():
+        for _data in self.data['items'].values():
             path = f'./Graphic/Images/{_data["img-token"]}.png'
             img = ImageTk.PhotoImage(Image.open(path).resize((100,100)))
             icons.append(img)
@@ -42,23 +43,17 @@ class Application:
 
     def show_widgets(self, icons, priceWidgets, nameWidgets, metaWidgets):
 
-        count = 0
-        for icon in icons:
-            panel = Label(root, image=icon)
-            panel.grid(row=count, column=0, padx = '50', pady='10')
-            count+=1
-        count = 0
-        for name in nameWidgets:
-            name.grid(row=count, column=1, padx = '50', pady='10')
-            count+=1
-        count = 0
-        for price in priceWidgets:
-            price.grid(row=count,column=2, padx = '50', pady='10')
-            count +=1
-        count = 0
-        for metadata in metaWidgets:
-            metadata.grid(row=count,column=3, padx = '50', pady='10')
-            count +=1
-        
+        #I suppose number-of-items is always accurate (foolish assumption)
+        for i in range(int(self.data['number-of-items'])):
+            panel = Label(root, image=icons[i])
+            panel.grid(row=i, column=0, padx = '50', pady='10')
+            nameWidgets[i].grid(row=i, column=1, padx = '50', pady='10')
+            priceWidgets[i].grid(row=i,column=2, padx = '50', pady='10')
+            metaWidgets[i].grid(row=i,column=3, padx = '50', pady='10')
+            remove_button = Button(
+                root, text='Remove', padx=40, pady=0,
+                command=None, fg="white", bg = "Black"
+                )
+            remove_button.grid(row=i, column=4)
         root.mainloop()
 
