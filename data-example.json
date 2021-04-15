@@ -1,96 +1,137 @@
 {
-    "last-updated": "2021-04-07 8:46:04.782163",
-    "number-of-items": 7,
+    "last-updated": "2021-04-15 13:09:52.216444",
+    "number-of-items": 10,
     "items": {
-        "msi-geforce-rtx-3090-rtx-3090-gaming-x-trio-24g/p/N82E16814137595?Description=rtx%203090&cm_re=rtx_3090-_-14-137-595-_-Product": {
+        "p/N82E16824012013?Item=N82E16824012013": {
             "history": {
-                "2021-04-05": "$2,799.99",
-                "2021-04-06": "$2,799.99",
-                "2021-04-07": "$2,799.99"
+                "2021-04-08": "$364.99",
+                "2021-04-12": "$364.99",
+                "2021-04-13": "$447.99",
+                "2021-04-14": "$447.99",
+                "2021-04-15": "$447.99"
+            },
+            "shipping": "$9.99 ",
+            "metadata": {
+                "price-was": "$449.99"
+            },
+            "img-token": "cec6a2de-675c-4191-82fb-9c4ded7f710c",
+            "product-name": "GIGABYTE G27QC 27\"165"
+        },
+        "samsung-970-evo-plus-1tb/p/N82E16820147743?Item=N82E16820147743&cm_sp=Homepage_dailydeals-_-P0_20-147-743-_-04082021": {
+            "history": {
+                "2021-04-08": "$199.99",
+                "2021-04-12": "$219.99",
+                "2021-04-13": "$219.99",
+                "2021-04-14": "$219.99",
+                "2021-04-15": "$219.99"
+            },
+            "shipping": "",
+            "metadata": {},
+            "img-token": "83b39adf-4953-4ec4-a839-542ffa7686ef",
+            "product-name": "SAMSUNG 970 EVOPLUS"
+        },
+        "msi-geforce-rtx-2060-rtx-2060-gaming-z-6g/p/N82E16814137379?Item=9SIAPN9EA59359": {
+            "history": {
+                "2021-04-12": "$1,243.00",
+                "2021-04-13": "$1,243.00",
+                "2021-04-14": "$1,243.00",
+                "2021-04-15": "$1,243.00"
+            },
+            "shipping": "Special",
+            "metadata": {},
+            "img-token": "15b01664-c904-4ebb-9634-2a089290aff1",
+            "product-name": "MSI GeForce RTX2060"
+        },
+        "black-msi-gf-series-gf65-thin-9sd-836-gaming-entertainment/p/N82E16834155589?Description=gaming%20laptop&cm_re=gaming_laptop-_-34-155-589-_-Product": {
+            "history": {
+                "2021-04-12": "$1,294.99",
+                "2021-04-13": "$1,294.99",
+                "2021-04-14": "$1,294.99",
+                "2021-04-15": "$1,294.99"
+            },
+            "shipping": "$9.99 ",
+            "metadata": {},
+            "img-token": "42935cb0-edd7-4f52-822c-547a81b17e19",
+            "product-name": "MSI GF65 Thin9SD-836"
+        },
+        "antec-vp-plus-series-vp500-plus-500w/p/N82E16817371088?Item=N82E16817371088&cm_sp=Homepage_SS-_-P0_17-371-088-_-04122021": {
+            "history": {
+                "2021-04-12": "$44.99",
+                "2021-04-13": "$47.99",
+                "2021-04-14": "$47.99",
+                "2021-04-15": "$47.99"
+            },
+            "shipping": "$7.99 ",
+            "metadata": {
+                "price-was": "$49.99"
+            },
+            "img-token": "92e29d36-67f6-499d-980f-1cb3eb3255c8",
+            "product-name": "Antec Value PowerSeries"
+        },
+        "moonlight-white-asus-rog-zephyrus-g-ga503qs-xs98q-wh-gaming-entertainment/p/N82E16834235633?Item=N82E16834235633&cm_sp=Homepage_MKPL-_-P2_34-235-633-_-04122021": {
+            "history": {
+                "2021-04-12": "$3,499.99",
+                "2021-04-13": "$3,499.99",
+                "2021-04-14": "$3,499.99",
+                "2021-04-15": "$3,499.99"
+            },
+            "shipping": "$9.99 ",
+            "metadata": {},
+            "img-token": "3bfc4e3d-08da-40bf-b8e2-96f10e0ee80b",
+            "product-name": "ASUS ROG ZephyrusG"
+        },
+        "amd-ryzen-5-3600/p/N82E16819113569?Item=N82E16819113569&cm_sp=Homepage_BS-_-P4_19-113-569-_-04122021": {
+            "history": {
+                "2021-04-12": "$259.99",
+                "2021-04-13": "$259.99",
+                "2021-04-14": "$259.99",
+                "2021-04-15": "$259.99"
+            },
+            "shipping": "",
+            "metadata": {
+                "price-was": "$269.99"
+            },
+            "img-token": "1d20ab7d-81f2-4c86-8b7b-eaef0bc9adcd",
+            "product-name": "AMD RYZEN 53600"
+        },
+        "cooler-master-masterliquid-ml360r-rgb-liquid-cooling-system/p/N82E16835103275": {
+            "history": {
+                "2021-04-13": "$199.99",
+                "2021-04-14": "$199.99",
+                "2021-04-15": "$199.99"
+            },
+            "shipping": "$9.99 ",
+            "metadata": {
+                "price-was": "$229.99",
+                "price-save": "$30.00 ",
+                "percent-save": "(13%)"
+            },
+            "img-token": "4a8905f0-4c7a-4c58-b9a3-cd72ca52d7d7",
+            "product-name": "Cooler Master MasterLiquidML360R"
+        },
+        "corsair-co-9050092-ww-case-fan/p/N82E16835181168?Item=N82E16835181168": {
+            "history": {
+                "2021-04-13": "$169.99",
+                "2021-04-14": "$169.99",
+                "2021-04-15": "$169.99"
+            },
+            "shipping": "",
+            "metadata": {},
+            "img-token": "082fe617-b5e5-4d3e-a155-eb1d55586d68",
+            "product-name": "Corsair LL SeriesCO-9050092-WW"
+        },
+        "asus-geforce-rtx-3090-tuf-rtx3090-o24g-gaming/p/N82E16814126454?Description=rtx%203090&cm_re=rtx_3090-_-14-126-454-_-Product": {
+            "history": {
+                "2021-04-13": "$2,699.99",
+                "2021-04-14": "$2,699.99",
+                "2021-04-15": "$2,699.99"
             },
             "shipping": "$7.99 ",
             "metadata": {
                 "OOS": true
             },
-            "product-name": "MSI GeForce RTX3090"
-        },
-        "huawei-55024688-smart-watch-watch-gt-2-sport-edition/p/N82E16886611051?Item=N82E16886611051&cm_sp=Homepage_dailydeals-_-P2_86-611-051-_-04052021": {
-            "history": {
-                "2021-04-05": "$198.99",
-                "2021-04-06": "$198.99",
-                "2021-04-07": "$198.99"
-            },
-            "shipping": "$0.02 ",
-            "metadata": {
-                "price-was": "$299.99",
-                "time-left": "Sale Ends in 5 Days (Sun) - ",
-                "price-save": "$101.00 ",
-                "percent-save": "(34%)"
-            },
-            "product-name": "HUAWEI Watch GT2"
-        },
-        "asus-vivobook-flip-tp412fa-ds51t-ca-star-grey-metal/p/N82E16834235326?Item=N82E16834235326": {
-            "history": {
-                "2021-04-06": "$835.99",
-                "2021-04-07": "$835.99"
-            },
-            "shipping": "",
-            "metadata": {
-                "OOS": true,
-                "price-was": "$849.00"
-            },
-            "product-name": "ASUS Vivobook FlipIntel"
-        },
-        "asus-rt-ac68u-ieee-802-11a-ieee-802-11b-ieee-802-11g-ieee-802-11n-ieee-802-11ac-ipv4-ipv6/p/N82E16833320174": {
-            "history": {
-                "2021-04-06": "$179.99",
-                "2021-04-07": "$179.99"
-            },
-            "shipping": "",
-            "metadata": {},
-            "product-name": "ASUS AC1900 Wi-FiDual-band"
-        },
-        "netgear-archer-ax50-ieee-802-11ax-ac-n-a-5-ghz-ieee-802-11ax-n-b-g-2-4-ghz/p/N82E16833704495?Item=N82E16833704495": {
-            "history": {
-                "2021-04-06": "$149.99",
-                "2021-04-07": "$149.99"
-            },
-            "shipping": "",
-            "metadata": {
-                "price-was": "$179.99",
-                "time-left": "Sale Ends in 2 Days (Thu) - ",
-                "price-save": "$30.00 ",
-                "percent-save": "(17%)"
-            },
-            "product-name": "TP-Link Archer AX50AX3000"
-        },
-        "tp-link-archer-c5400x/p/N82E16833704423": {
-            "history": {
-                "2021-04-06": "$279.99",
-                "2021-04-07": "$279.99"
-            },
-            "shipping": "",
-            "metadata": {
-                "price-was": "$449.99",
-                "time-left": "Sale Ends in 6 Days (Mon) - ",
-                "price-save": "$170.00 ",
-                "percent-save": "(38%)"
-            },
-            "product-name": "TP-LINK AC5400 MU-MIMOTri-Band"
-        },
-        "seagate-ironwolf-st6000vn0033-6tb/p/N82E16822172057?Item=N82E16822172057&cm_sp=Homepage_dailydeals-_-P0_22-172-057-_-04062021": {
-            "history": {
-                "2021-04-06": "$177.99",
-                "2021-04-07": "$177.99"
-            },
-            "shipping": "$7.99 ",
-            "metadata": {
-                "price-was": "$239.99",
-                "time-left": "Sale Ends in 2 Days (Thu) - ",
-                "price-save": "$62.00 ",
-                "percent-save": "(26%)"
-            },
-            "product-name": "Seagate IronWolf 6TBNAS"
+            "img-token": "eb949bd7-f401-44ab-92f3-4be3cebfa2a2",
+            "product-name": "ASUS TUF GamingGeForce"
         }
     }
 }
