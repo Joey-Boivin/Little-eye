@@ -6,9 +6,9 @@ import traceback
 import requests
 import os
 import uuid
+import concurrent.futures
 from datetime import datetime as dt
 from bs4 import BeautifulSoup
-
 
 
 class NeweggTracker:
@@ -60,13 +60,16 @@ class NeweggTracker:
         tracked_tags = list(self.data['items'].keys())
         self.data["last-updated"] = str(dt.now())
         self.data["number-of-items"] = len(tracked_tags)
-        for tag in tracked_tags:
-            new_data = self.fetch_html(tag)
-            if new_data:
-                self.data["items"][tag]["product-name"] = new_data[tag]["product-name"]
-                self.data["items"][tag]["history"][str(dt.now().date())] = new_data[tag]['price']
-                self.data["items"][tag]["shipping"] = new_data[tag]['shipping']
-                self.data["items"][tag]["metadata"] = new_data[tag]["metadata"]
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            new_data_generator = executor.map(self.fetch_html, tracked_tags)
+        
+        for item in new_data_generator:
+            for tag, data in item.items():
+                self.data["items"][tag]["product-name"] = data["product-name"]
+                self.data["items"][tag]["history"][str(dt.now().date())] = data['price']
+                self.data["items"][tag]["shipping"] = data['shipping']
+                self.data["items"][tag]["metadata"] = data["metadata"]
+    
         with open("./Tracker/data.json", "w") as file:
             json.dump(self.data, file, indent=4)
 
@@ -85,7 +88,6 @@ class NeweggTracker:
                 product_title = soup.find("h1", {"class": "product-title"})
                 price_is = soup.find("li", {"class": "price-current"})
                 shipping = soup.find("li", {"class": "price-ship"})
-                
                 product_inventory = soup.find("div", {"class": "product-inventory"})
                 price_was = soup.find("span", {"class": "price-was-data"}) #format is: $amount Shipping
                 time_left_on_sale = soup.find("span", {"class": "price-save-endtime"})
@@ -141,8 +143,4 @@ class NeweggTracker:
                 print(f"Could not get or save the image for {tag}")
                 src = ""
             res["img-token"] = src
-        print({tag:res})
         return {tag: res}
-
-
-
