@@ -1,0 +1,1 @@
+The images of the products will be saved in this folder.
