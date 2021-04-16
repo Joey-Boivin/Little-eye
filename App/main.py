@@ -1,19 +1,11 @@
 """Main module for newegg-tracker"""
+
 import argparse
 import json
 import os
 import Tracker
 import Graphic
 
-if not os.path.exists('./Tracker/data.json'):
-    with open("./Tracker/data.json", "w") as file:
-        empty_data = {
-            "last-updated": "",
-            "number-of-items": 0,
-            "items": {
-            }
-        }
-        json.dump(empty_data, file, indent=4)
 
 #TODO: This function is too big.
 def main():
@@ -25,15 +17,12 @@ def main():
     args = parser.parse_args()
     gui = args.Gui
 
-    #Cannot update the data before I check if it's the first use
-    #TODO: Maybe modify the update_data method so I can update ASAP and get_data after that stored into a variable (cleaner code)
-    if not Tracker.NeweggTracker().get_data()['items']:
-        if not args.add:
-            print("You have no items tracked yet. Would you like to track one? Execute python main.py -h for help")
-            return
-
     Tracker.NeweggTracker().update_data()
     data = Tracker.NeweggTracker().get_data()
+
+    if not data["items"] and not args.add:
+        print("You have no items tracked yet. Execute python main.py -h for help")
+        return
 
     if gui == "Y":
         app = Graphic.Application(data)
@@ -54,5 +43,19 @@ def main():
     else:
         print("Invalid argument. Use command -h to get help.")
 
+
 if __name__ == '__main__':
+
+    DATA_PATH = "./Tracker/data.json"
+
+    if not os.path.exists(DATA_PATH):
+        with open(DATA_PATH, "w") as file:
+            empty_data = {
+                "last-updated": "",
+                "number-of-items": 0,
+                "items": {
+                }
+            }
+            json.dump(empty_data, file, indent=4)
+
     main()
