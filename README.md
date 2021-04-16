@@ -1,8 +1,8 @@
-# Newegg-tracker
+# Little eye
 
-This is a simple tracker for items listed on [Newegg](https://www.newegg.ca/).
+This is a simple low dependency multithreading application to track items listed on [Newegg](https://www.newegg.ca/).
 
-![alt text](Screenshot.png "Title")
+![Image](Screenshot.png "Little eye gui")
 ## Dependencies
 
 - [beautifulsoup4](https://pypi.org/project/beautifulsoup4/)
@@ -17,6 +17,8 @@ This is a simple tracker for items listed on [Newegg](https://www.newegg.ca/).
 ## First use
 
 To track your first item, retrieve the url extention that follows https://www.newegg.ca/
+
+Move into the App directory and enter in the command line:
 
 > python main.py N --add your-url-extension
 

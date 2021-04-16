@@ -1,1 +1,1 @@
-from Tracker.newegg_tracker import NeweggTracker
+from Tracker.app import NeweggTracker
