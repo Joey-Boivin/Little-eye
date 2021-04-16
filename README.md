@@ -1,6 +1,6 @@
 # Little eye
 
-This is a simple low dependency multithreading application to track items listed on [Newegg](https://www.newegg.ca/). Made for self-educational purposes.
+This is a simple low dependency multithreading application to track items listed on [Newegg](https://www.newegg.ca/). This was made for self-educational purposes
 
 ![Image](Screenshot.png "Little eye gui")
 ## Dependencies
