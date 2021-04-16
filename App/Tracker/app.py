@@ -19,14 +19,17 @@ class NeweggTracker:
 
 
     def __init__(self):
-        """Creates instance of the current data
+        """
+        Creates instance of the current data
         """
 
         self.data = self.get_data()
 
     @staticmethod
     def get_data() -> dict:
-        """Gets the json data in data.json"""
+        """
+        Gets the json data in data.json
+        """
 
         with open("./Tracker/data.json") as file:
             data = json.load(file)
@@ -65,7 +68,6 @@ class NeweggTracker:
 
         data = {}
         try:
-            #Keeping only the first 4 words of the title
             title = product_title.text.split(" ")[0:4]
             data["product-name"] = title
             data["price"] = price_is.text
