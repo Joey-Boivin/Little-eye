@@ -68,7 +68,7 @@ class NeweggTracker:
 
         data = {}
         try:
-            title = product_title.text.split(" ")[0:4]
+            title = " ".join(product_title.text.split(" ")[:4]) #Keeping the first 4 words
             data["product-name"] = title
             data["price"] = price_is.text
             data["shipping"] = shipping.text[:-9] if shipping else "" #see price_was in fetch_html
@@ -122,7 +122,8 @@ class NeweggTracker:
         new_item = {"history": {str(dt.now().date()) : new_item_data[tag]["price"]},
                     "shipping": new_item_data[tag]["shipping"],
                     "metadata": new_item_data[tag]["metadata"],
-                    "img-token": new_item_data[tag]["img-token"]}
+                    "img-token": new_item_data[tag]["img-token"],
+                    "product-name": new_item_data[tag]["product-name"]}
         self.data["items"][tag] = new_item
 
         with open("./Tracker/data.json", "w") as file:
@@ -167,3 +168,4 @@ class NeweggTracker:
 
         with open("./Tracker/data.json", "w") as file:
             json.dump(self.data, file, indent=4)
+
